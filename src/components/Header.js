@@ -3,7 +3,7 @@ import { Context } from '../context/ProductsProvider';
 
 const Header = () => {
 
-    const {filterProducts} = useContext(Context);
+    const { filterProducts } = useContext(Context);
 
     const handleClick = (e) => {
         filterProducts(e.target.value)

@@ -126,53 +126,45 @@ const ProductsProvider = (props) => {
     }
   ])
 
-  const [budget, setBudget] = useState([]);
-
-  const [filters] = useState(["XS", "S", "M", "ML", "L", "XL", "XXL"]);
+  const [basket, setBudget] = useState([]);
 
   const [totalCount, setTotalCount] = useState(0);
 
   const [isOpen, setIsOpen] = useState(true);
 
-  const addBudget = (product) => {
-    let isAny = true;
-    budget.map(element => {
-      if(element.id === product.id){
-        isAny = false;
-      }
-    })
-    if(isAny){
-      setBudget([...budget, product]);
-      setTotalCount(totalCount => totalCount += product.price);
-      setIsOpen(false);
-    }
+
+  // Add Item Func
+  const addBasket = (product) => {
+    setBudget(prevState => [...prevState, product]);
+    setTotalCount(prevCount => prevCount += product.price);
+    setIsOpen(false);
   }
 
-  const deleteBudget = (id, price) => {
-    setTotalCount(totalCount => totalCount -= price);
-    setBudget(budget.filter(element => element.id !== id));
+  // Delete Item Func
+  const deleteBasket = (id, price) => {
+    setTotalCount(prevCount => prevCount -= price);
+    setBudget(prevBasket => prevBasket.filter(element => element.id !== id));
   }
 
+  // Filter Products Func
   const filterProducts = (value) => {
-    value === "lowest" ? setProducts([...products].sort((a, b) => a.price - b.price))
-      : setProducts([...products].sort((a, b) => b.price - a.price))
+    value === "lowest" ? setProducts(prevProducts => [...prevProducts].sort((a, b) => a.price - b.price))
+      : setProducts(prevProducts => [...prevProducts].sort((a, b) => b.price - a.price))
   }
 
-  const changeStatus = (query) => {
-    !query ? setIsOpen(true) : setIsOpen(false);
-  }
+  // Open-Close Basket Func
+  const togglerDrawer = () => setIsOpen(prevState => !prevState);
 
   return (
     <Context.Provider value={{
       products,
-      filters,
-      budget,
+      basket,
       totalCount,
       isOpen,
-      addBudget,
-      deleteBudget,
+      addBasket,
+      deleteBasket,
       filterProducts,
-      changeStatus
+      togglerDrawer
     }}>
 
       {props.children}

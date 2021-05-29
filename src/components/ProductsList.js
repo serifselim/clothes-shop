@@ -5,7 +5,7 @@ import { Context } from '../context/ProductsProvider';
 const ProductsList = () => {
 
     const { products } = useContext(Context);
-    
+
     return (
         <div className="products-list">
             {products.map(product => (

@@ -8,14 +8,14 @@ const App = () => {
   return (
 
     <ProductsProvider>
-      <Github/>
+      <Github />
       <div className="container">
         <section className="main">
           <Header />
           <ProductsList />
         </section>
       </div>
-      <Buy/>
+      <Buy />
     </ProductsProvider>
 
   );
