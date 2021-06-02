@@ -13,10 +13,10 @@ const Header = () => {
     return (
         <div className="header">
 
-                <ul className="product-nav">
-                    <li><Link to="/">Store</Link></li>
-                    <li><Link to="/favorites">Favorites</Link></li>
-                </ul>
+            <ul className="product-nav">
+                <li><Link to="/">Store</Link></li>
+                <li><Link to="/favorites">Favorites</Link></li>
+            </ul>
 
             <div className="product-option">
                 <span className="product-option__text">Order by</span>
