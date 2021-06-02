@@ -1,4 +1,4 @@
-## Clothes Shop App
+## E-Commerce Clothes Shop App
 
 [Netlify Live](https://elegant-ptolemy-326be7.netlify.app/)
 
