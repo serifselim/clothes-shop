@@ -1,5 +1,5 @@
 // import { useContext } from 'react';
-import { useContext } from 'react';
+import React,{ useContext } from 'react';
 import BuyItem from './BuyItem';
 import { Context } from '../context/ProductsProvider';
 

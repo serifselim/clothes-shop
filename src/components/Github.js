@@ -1,3 +1,5 @@
+import React from 'react';
+
 const Github = () => (
   <a
     href="https://github.com/serifselim/clothes-shop"
