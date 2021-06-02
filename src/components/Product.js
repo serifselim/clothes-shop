@@ -1,6 +1,6 @@
 import React,{ useContext } from 'react';
 import { Context } from '../context/ProductsProvider';
-import { Button } from './Button';
+// import { Button } from './Button';
 
 const Product = (props) => {
 
@@ -28,8 +28,8 @@ const Product = (props) => {
             <div className="product-item__price">
                 <span className="product-item__price--title">{product.title}</span>
                 <span className="product-item__price--count">{product.price} $</span>
-                <Button onClick={() => handleBasket(product)} className="product-item__price--button" value={product.id}>Buy Now</Button>
-                <Button green onClick={() => handleFavorite(product)} className="product-item__price--button" value={product.id}>Add Favorites</Button>
+                <button onClick={() => handleBasket(product)} className="product-item__price--button" value={product.id}>Buy Now</button>
+                <button onClick={() => handleFavorite(product)} className="product-item__price--button" value={product.id}>Add Favorites</button>
             </div>
         </div>
     )
