@@ -13,15 +13,12 @@ const Header = () => {
     return (
         <div className="header">
 
-            <div className="product-count">
-                16 Product(s) found.
-          </div>
-
-            <div className="product-option">
-                <ul>
+                <ul className="product-nav">
                     <li><Link to="/">Store</Link></li>
                     <li><Link to="/favorites">Favorites</Link></li>
                 </ul>
+
+            <div className="product-option">
                 <span className="product-option__text">Order by</span>
                 <select onChange={handleClick} className="product-option__select">
                     <option value>Select</option>

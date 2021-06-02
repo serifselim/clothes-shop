@@ -44,10 +44,32 @@ body {
   padding: 2rem 0;
 }
 
-.main .product-count {
+.main .product-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-size: 1.5rem;
   font-weight: 700;
   color: #424242;
+  -webkit-transition: color .3s;
+  transition: color .3s;
+}
+
+.main .product-nav li {
+  margin-right: 2rem;
+  list-style: none;
+}
+
+.main .product-nav li a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: #424242;
+  -webkit-transition: color .3s;
+  transition: color .3s;
+}
+
+.main .product-nav li a:hover {
+  color: #F2DA00;
 }
 
 .main .product-option {

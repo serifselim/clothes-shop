@@ -15,10 +15,27 @@
     padding: 2rem 0;
   }
 
-  .product-count {
+  .product-nav {
+    display: flex;
     font-size: 1.5rem;
     font-weight: 700;
     color: $color-gray;
+    transition: color .3s;
+
+    li {
+      margin-right: 2rem;
+      list-style: none;
+      a {
+        text-decoration: none;
+        font-size: 2rem;
+        color: $color-gray;
+        transition: color .3s;
+        &:hover{
+          color: $color-yellow;
+        }
+      }
+      
+    }
   }
 
   .product-option {
