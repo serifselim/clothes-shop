@@ -88,19 +88,6 @@
           color: $color-yellow;
           font-weight: bold;
         }
-
-        &--button {
-          display: none;
-          background: $color-yellow;
-          border-radius: 5px;
-          color: $color-gray;
-          font-size: 22px;
-          font-weight: bold;
-          border: none;
-          width: 80%;
-          margin: 0 auto;
-          padding: 0.5rem 0;
-        }
       }
 
       &:hover .product-item__price {
@@ -117,9 +104,6 @@
         }
         &--button {
           display: block;
-          &:hover {
-            opacity: 0.8;
-          }
         }
       }
     }

@@ -143,19 +143,6 @@ body {
   font-weight: bold;
 }
 
-.main .products-list .product-item__price--button {
-  display: none;
-  background: #F2DA00;
-  border-radius: 5px;
-  color: #424242;
-  font-size: 22px;
-  font-weight: bold;
-  border: none;
-  width: 80%;
-  margin: 0 auto;
-  padding: 0.5rem 0;
-}
-
 .main .products-list .product-item:hover .product-item__price {
   height: 100%;
   border-radius: 15px;
@@ -174,10 +161,6 @@ body {
 
 .main .products-list .product-item:hover .product-item__price--button {
   display: block;
-}
-
-.main .products-list .product-item:hover .product-item__price--button:hover {
-  opacity: 0.8;
 }
 
 .buy {

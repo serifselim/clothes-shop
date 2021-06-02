@@ -1,5 +1,6 @@
 import React,{ useContext } from 'react';
 import { Context } from '../context/ProductsProvider';
+import { Button } from './Button';
 
 const FavoriteItem = (props) => {
 
@@ -20,8 +21,8 @@ const FavoriteItem = (props) => {
             <div className="product-item__price">
                 <span className="product-item__price--title">{product.title}</span>
                 <span className="product-item__price--count">{product.price} $</span>
-                <button onClick={() => handleBasket(product)} className="product-item__price--button" value={product.id}>Buy Now</button>
-                <button onClick={() => deleteFavorite(product.id)} className="product-item__price--button" value={product.id}>Remove</button>
+                <Button onClick={() => handleBasket(product)} className="product-item__price--button" value={product.id}>Buy Now</Button>
+                <Button red onClick={() => deleteFavorite(product.id)} className="product-item__price--button" value={product.id}>Remove</Button>
             </div>
         </div>
     )

@@ -4,32 +4,38 @@ export const Context = createContext();
 
 const ProductsProvider = (props) => {
 
-  const getData = (value,type) => {
+
+  // Get Local Data Func
+  const getLocalData = (value,type) => {
     let data = JSON.parse(localStorage.getItem(value));
     return data !== null ? data : type;
   }
 
+  // Hooks
   const [products, setProducts]= useState(() => {
     let data = require('../data/products.json');
     return data.product;
   });
 
-  const [favorites,setFavorites] = useState(getData("favorites",[]));
+  const [favorites,setFavorites] = useState(getLocalData("favorites",[]));
 
-  const [basket, setBudget] = useState(getData("basket",[]));
+  const [basket, setBudget] = useState(getLocalData("basket",[]));
 
-  const [totalCount, setTotalCount] = useState(getData("totalCount",0));
+  const [totalCount, setTotalCount] = useState(getLocalData("totalCount",0));
 
   const [isOpen, setIsOpen] = useState(true);
 
+  // Listening Favorites
   useEffect(() => {
     localStorage.setItem("favorites",JSON.stringify(favorites));
   }, [favorites])
 
+  // Listening Basket
   useEffect(() => {
     localStorage.setItem("basket",JSON.stringify(basket));
   }, [basket])
 
+  // Listening Price
   useEffect(() => {
     localStorage.setItem("totalCount",JSON.stringify(totalCount));
   },[totalCount])
